@@ -7,6 +7,13 @@
     "text": "University of Warwick\n\n\n\n2021: Associate Professor of Quantitative Political Science\n\n\n2017: Senior Teaching Fellow in Quantitative Political Science\n\n\n2016: Senior Fellow of the Higher Education Academy\n\n\n2014: Teaching Fellow in Quantitative Methods\n\n\n\nUniversity of Sheffield\n\n\n\n2010 - 2014: Graduate Teaching Assistant in the Department of Politics\n\n\n2009 - 2014: PhD in Politics. Thesis Title “Confounding Modernisation: Development and Democracy in sub-Saharan Africa”\n\n\n\nLeuphana Universität Lüneburg, Germany\n\n\n\n2005 - 2009: Diplom Ökonom (equivalent to MSc in Economics and Social Sciences)"
   },
   {
+    "objectID": "textbook.html",
+    "href": "textbook.html",
+    "title": "Textbook",
+    "section": "",
+    "text": "I am currently writing two (yes, two) textbooks for Oxford University Press:\n\n\n\n“Introduction to Quantitative Methods in the Social Sciences - with R”, and\n\n\n“Introduction to Quantitative Methods in the Social Sciences - with SPSS”.\n\n\n\nWith the research process at its heart, the book explores how quantitative methods can be used to answer research questions in the social sciences. In a personable and engaging style, the author introduces students to quantitative methods and how to implement them in the software R. With practical, cutting-edge pedagogical features, it turns the often-dreaded word “statistics” into a fun and rewarding experience. Anticipated publication: 2026.\n\n\nFeedback from Reviewers to Date\n\n\n\n“One of the best books in quants and RStudio I have read (so far).”\n\n\n“A splendid book by an author whose writing makes you like him and want to stick with it.”\n\n\n“I am really very impressed by the quality and clarity of expression and communication in these chapters. I would be very happy to have this author teach my students!”\n\n\n“It is much more conversational and accessible than the style in Imai, with more examples for each concept.”"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
@@ -49,10 +56,38 @@
     "text": "Dr Flo Linke\nAssociate Professor of Quantitative Political Science\nUniversity of Warwick\nDepartment of Politics and International Studies\nSocial Sciences Building, Room D1.08\nCoventry, CV4 7AL\nFlorian.Linke@warwick.ac.uk"
   },
   {
-    "objectID": "textbook.html",
-    "href": "textbook.html",
-    "title": "Textbook",
+    "objectID": "Quarto.html",
+    "href": "Quarto.html",
+    "title": "Intro to Quarto",
     "section": "",
-    "text": "I am currently writing two (yes, two) textbooks for Oxford University Press:\n\n\n\n“Introduction to Quantitative Methods in the Social Sciences - with R”, and\n\n\n“Introduction to Quantitative Methods in the Social Sciences - with SPSS”.\n\n\n\nWith the research process at its heart, the book explores how quantitative methods can be used to answer research questions in the social sciences. In a personable and engaging style, the author introduces students to quantitative methods and how to implement them in the software R. With practical, cutting-edge pedagogical features, it turns the often-dreaded word “statistics” into a fun and rewarding experience. Anticipated publication: 2026.\n\n\nFeedback from Reviewers to Date\n\n\n\n“One of the best books in quants and RStudio I have read (so far).”\n\n\n“A splendid book by an author whose writing makes you like him and want to stick with it.”\n\n\n“I am really very impressed by the quality and clarity of expression and communication in these chapters. I would be very happy to have this author teach my students!”\n\n\n“It is much more conversational and accessible than the style in Imai, with more examples for each concept.”"
+    "text": "Quarto is “an open-source scientific and technical publishing system”1 which is in each and every way superior to MS Word and Apple Pages. I am assuming that you have worked with R before when you read this. Otherwise, you need to install both R and RStudio through which will use Quarto. You can find full instructions for this on the Posit website.\nYou can then use Quarto through R and seamlessly integrate any statistical output you create in the rendered PDF document. Quarto even creates a semi-automated list of references for you! So, this might be a very handy tool for essays, but certainly for your your dissertation where you have to handle a long document and a considerable number of references. However, before you embark on writing your assessment in Quarto, please consult the module director whether they are happy to accept submissions in pdf format – not all module directors in PAIS will accept PDF documents.\nLet me now explain in a bit more depth why you should switch from Word/Pages to Quarto."
+  },
+  {
+    "objectID": "Quarto.html#rendering",
+    "href": "Quarto.html#rendering",
+    "title": "Intro to Quarto",
+    "section": "Rendering",
+    "text": "Rendering\nTo convert the qmd file to a pdf, you will have to “render” the qmd file. An icon with an arrow is located in the task bar at the top whenever you have an qmd file open. Click it to start the conversion.\n\nWhen there is a mistake in your qmd file, such as an unbalanced bracket in a code chunk, for example, R will not render the pdf. Therefore, render your document regularly, so that you can trace the error more easily."
+  },
+  {
+    "objectID": "Quarto.html#the-template-explained",
+    "href": "Quarto.html#the-template-explained",
+    "title": "Intro to Quarto",
+    "section": "The Template Explained",
+    "text": "The Template Explained\nThere is quite a bit of formatting going on in the qmd file, and this is what all of this code achieves:\n\nLight grey background to improve readability (a little present to myself for marking)\nFont size 12, one-half spacing\nMain font: Latin Modern Sans Serif for legibility\nMaths font: Fira Maths, ditto\nTitle page with module name, your registration number, submission date, and word count. No page number.\nPage numbering in Roman numerals for table of contents, list of figures, and list of tables\nTable of contents, list of figures, and list of tables are automatic\nPage numbering in Arabic numerals from the start of the text\nAll captions are placed beneath figures and tables\nFully adjustable size of modelsummary table (controlled via percentage of text width), so you can control the number of words the table “costs”\nAutomatic page break if there are fewer than seven lines after a (sub-)section heading\nAutomatic List of References, formatted in APA (American Psychological Association) style\nAppendix after the List of References\nCode chunks are set by default not to show the code in the rendered file. Messages, warnings, and errors are suppressed"
+  },
+  {
+    "objectID": "Quarto.html#assessment-submission",
+    "href": "Quarto.html#assessment-submission",
+    "title": "Intro to Quarto",
+    "section": "Assessment Submission",
+    "text": "Assessment Submission\nWhen it comes to submitting your assessment, please only submit the rendered pdf, and NOT the qmd file.\nPlease ensure that you have copied and pasted your complete RScript into the Appendix section of the template. By complete I mean a script that takes you (or anybody else) from loading the original data sets I provide to the output you include in the report you submit on Tabula. The script should be properly annotated to make your work reproducible and easy to follow."
+  },
+  {
+    "objectID": "Quarto.html#footnotes",
+    "href": "Quarto.html#footnotes",
+    "title": "Intro to Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://quarto.org/↩︎\nYou can create absolute and relative file paths to other locations, but let’s not over-complicate things here.↩︎\nOtherwise, this will be placed into the document as the very last thing, but because you have an appendix, I needed to overrule this behaviour in the template.↩︎"
   }
 ]
