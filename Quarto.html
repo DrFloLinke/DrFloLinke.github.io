@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -380,7 +400,7 @@ preferably be APA styled, but I’m not too precious as long as it’s consisten
     edition={Fifth Edition},
     year={2018}}
 </code></pre>
-<p>In this entry, <code>agresti:2018</code> is called the citation key. This is what you will use in the qmd file. For example when you type <code>\citep{agresti:2018}</code> this will be shown as <span class="citation" data-cites="agresti:2018">[@agresti:2018]</span> in the final document. In the template, I have enabled the following styles for including a reference in the text:</p>
+<p>In this entry, <code>agresti:2018</code> is called the citation key. This is what you will use in the qmd file. For example when you type <code>\citep{agresti:2018}</code> this will be shown as <span class="citation" data-cites="agresti:2018">(Agresti, 2018)</span> in the final document. In the template, I have enabled the following styles for including a reference in the text:</p>
 <div style="height:1em;">
 
 </div>
@@ -449,7 +469,7 @@ preferably be APA styled, but I’m not too precious as long as it’s consisten
 <li>Warwick Text</li>
 <li>references.bib.</li>
 </ul>
-<p>Render this document without making any changes to ensure this works. For the Undergraduate version, it should look like <a href="files/Quarto/Assessment Template/PAIS_Assessment_Template.pdf">this</a>, for the MA version like <a href="files/Quarto/Assessment Template MA/PAIS_Assessment_Template_MA.pdf">this</a>. Then you can start writing your assessment. Again, let me encourage you to render the document often, so that you can locate a potential mistake more easily should you receive an error message.</p>
+<p>Render this document without making any changes to ensure this works. For the Undergraduate version, it should look like <a href="files/Quarto/Rendered/PAIS_Assessment_Template.pdf">this</a>, for the MA version like <a href="files/Quarto/Rendered/PAIS_Assessment_Template_MA.pdf">this</a>. Then you can start writing your assessment. Again, let me encourage you to render the document often, so that you can locate a potential mistake more easily should you receive an error message.</p>
 <section id="the-template-explained" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="the-template-explained">The Template Explained</h2>
 <p>There is quite a bit of formatting going on in the qmd file, and this is what all of this code achieves:</p>
@@ -494,11 +514,16 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
+
 </section>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-agresti:2018" class="csl-entry" role="listitem">
+Agresti, A. (2018). <em><span class="nocase">Statistical Methods for the Social Sciences</span></em> (Fifth Edition). Harlow: Pearson.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>https://quarto.org/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
