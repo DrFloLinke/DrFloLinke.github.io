@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Quarto</title>
+<title>Dr Flo Linke | Intro to Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a14656760969ad1ff6e0395a4e5251c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-159b6cc5b600ed6d75e2fea0ad770639.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,11 +97,27 @@ div.csl-indent {
 <link rel="manifest" href="images/site.webmanifest?v=3">
 
 
+<meta name="theme-color" content="#1d1f2b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#1d1f2b" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script>
+// This MUST come before the script src above
+window.MathJax = {
+  tex: {
+    // (Quarto already sets these, but harmless to repeat)
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['\\[', '\\]'], ['$$', '$$']]
+  },
+  // Tell the CHTML output to use Fira
+  chtml: { font: 'mathjax-fira' }
+};
+</script>
 
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -149,6 +165,10 @@ div.csl-indent {
         <li>
     <a class="dropdown-item" href="./Quarto.html">
  <span class="dropdown-text">Quarto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dissertation.html">
+ <span class="dropdown-text">Dissertation Guidance</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://drflolinke.github.io/AWWL/">
@@ -221,10 +241,35 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link active" data-scroll-target="#what-is-quarto">What is Quarto?</a></li>
+  <li><a href="#professional-writing-in-political-science" id="toc-professional-writing-in-political-science" class="nav-link" data-scroll-target="#professional-writing-in-political-science">Professional Writing in Political Science</a></li>
+  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document">Creating a Quarto Document</a>
+  <ul class="collapse">
+  <li><a href="#yaml" id="toc-yaml" class="nav-link" data-scroll-target="#yaml">YAML</a></li>
+  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
+  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code Chunks</a></li>
+  <li><a href="#list-of-references" id="toc-list-of-references" class="nav-link" data-scroll-target="#list-of-references">List of References</a></li>
+  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering">Rendering</a></li>
+  </ul></li>
+  <li><a href="#assessment-template" id="toc-assessment-template" class="nav-link" data-scroll-target="#assessment-template">Assessment Template</a>
+  <ul class="collapse">
+  <li><a href="#the-template-explained" id="toc-the-template-explained" class="nav-link" data-scroll-target="#the-template-explained">The Template Explained</a></li>
+  <li><a href="#assessment-submission" id="toc-assessment-submission" class="nav-link" data-scroll-target="#assessment-submission">Assessment Submission</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -233,7 +278,7 @@ div.csl-indent {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -245,19 +290,23 @@ div.csl-indent {
 </header>
 
 
-<section id="what-is-quarto" class="level1 unnumbered">
-<h1 class="unnumbered">What is Quarto?</h1>
+<section id="what-is-quarto" class="level1">
+<h1>What is Quarto?</h1>
 <p>Quarto is “an open-source scientific and technical publishing system”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> which is in each and every way superior to MS Word and Apple Pages. I am assuming that you have worked with R before when you read this. Otherwise, please head over to the <a href="https://posit.co/download/rstudio-desktop/">Posit website</a> and download both R and RStudio for your operating system. We will be using Quarto through R Studio.</p>
 <p>With Quarto, you can write visually appealing documents, and seamlessly integrate any statistical output in the rendered PDF document. Quarto even creates a semi-automated list of references for you! So, this might be a very handy tool for essays, but certainly for your dissertation where you not only have to handle a long document, but also a considerable number of references. However, before you embark on writing your assessment in Quarto, please consult the module director whether they are happy to accept submissions in pdf format – not all module directors in PAIS will accept PDF documents.</p>
 <p>Let me now explain in a bit more depth why you should switch from Word/Pages to Quarto.</p>
 </section>
-<section id="professional-writing-in-political-science" class="level1 unnumbered">
-<h1 class="unnumbered">Professional Writing in Political Science</h1>
+<section id="professional-writing-in-political-science" class="level1">
+<h1>Professional Writing in Political Science</h1>
 <p>Please read <a href="https://stimson.web.unc.edu/wp-content/uploads/sites/9919/2018/02/Writing.pdf">Professional Writing in Political Science: A Highly opinionated Essay</a> by James A. Stimson. Stimson rejects Word and other similarly inclined word processing programs, as they are unable to achieve the standard required in professional academic writing. In the context of tables, for example, Stimson writes</p>
 <blockquote class="blockquote">
 <p>You are a professional author. Learn to use the tools of authorship or choose a profession for which you are better suited.</p>
 </blockquote>
-<p>I agree. And I wish more people, students and faculty members alike, would take note of this. The good news for you is that we will be using R on this module, and amongst the many other millions of things that this program enables us to do, it provides an interface to write with <a href="https://quarto.org/">Quarto</a>. All of my teaching materials (lecture slides, pdfs, and this companion) are set in Quarto. When we use it in R, the document will have essentially three parts:</p>
+<p>I agree. And I wish more people, students and faculty members alike, would take note of this. The good news for you is that we will be using R on this module, and amongst the many other millions of things that this program enables us to do, it provides an interface to write with <a href="https://quarto.org/">Quarto</a>. All of my teaching materials (lecture slides, pdfs, and this companion) are set in Quarto.</p>
+</section>
+<section id="creating-a-quarto-document" class="level1">
+<h1>Creating a Quarto Document</h1>
+<p>A Quarto document essentially has three different components:</p>
 <ul>
 <li>YAML</li>
 <li>Text</li>
@@ -281,12 +330,12 @@ div.csl-indent {
 
 </div>
 <p>It is possible that R will ask you to install the <code>quarto</code> package. Please do so, and also allow the installation of any dependencies if prompted.</p>
-<section id="yaml" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="yaml">YAML</h3>
+<section id="yaml" class="level3">
+<h3 class="anchored" data-anchor-id="yaml">YAML</h3>
 <p>YAML is an acronym for “Yet Another Markup Language”. This section of the document usually contains the settings for the entire document, such as the title, information about the bibliography (see below), and additional packages we might need to load. The YAML is gated by three horizontal dashes at the top and at the bottom. In the template, there is some more formatting going on outside of the YAML and finishes at line 152.</p>
 </section>
-<section id="text" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="text">Text</h3>
+<section id="text" class="level3">
+<h3 class="anchored" data-anchor-id="text">Text</h3>
 <p>Then, in line 155, follows the text which you can basically type as you always would. In order to use the familiar text formatting icons that turn text into headings, or into bold, change the font size, etc. you can switch the Quarto editor to “Visual” at the top. In the template, this is set to “Source” where Quarto would expect code to achieve all of these formatting operations.</p>
 <div style="height:1em;">
 
@@ -338,8 +387,8 @@ div.csl-indent {
 <p>R will insert a cross reference which will get updated automatically when you render the document. This has the advantage that you will never have to say “the figure below” or the “figure above”. This is both imprecise and dangerous, as the position of the figure might change as you write your assessment.</p>
 <p>You can also set beautiful equations in quarto Unless you really want to explain what conditional probabilities are in the the methods section of your assessment, I don’t think you will have to use this feature, however.</p>
 </section>
-<section id="code-chunks" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="code-chunks">Code Chunks</h3>
+<section id="code-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="code-chunks">Code Chunks</h3>
 <p>Without writing your assessment in quarto, you will have to copy and paste the <code>modelsummary</code> table into your assessment document. This is not only extra work, but also invites human error. Because every time you change your models you also have to do that copy and paste job again.</p>
 <p>When you are writing your assessment in quarto directly, you can seamlessly include your analysis into the document you are writing. You can hide all of the ugly code, and just show the beautiful <code>modelsummary</code> table at the end. How do you do that? To get started, please switch from the “Visual” mode back to “Source”. You can return to “Visual” editing mode once you are done with this.</p>
 <p>Now, all you need to do is to insert a code chunk like this where you want the results table to appear in your document:</p>
@@ -366,8 +415,8 @@ modelsummary()
 <p>Once you are happy with the output, create the chunk in the .qmd file and copy/paste your code.</p>
 </div>
 </section>
-<section id="list-of-references" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="list-of-references">List of References</h3>
+<section id="list-of-references" class="level3">
+<h3 class="anchored" data-anchor-id="list-of-references">List of References</h3>
 <p>OK, the biggest selling point of this is probably that Quarto will auto-generate a complete list of references by pressing a button. By the way, do you know what the difference is between a bibliography and a list of references?</p>
 <div class="def">
 <p>A <strong>bibliography</strong> lists all sources you have consulted for a project regardless of whether they are cited in the text, whereas a <strong>list of references</strong> only lists what has been cited in the text.</p>
@@ -451,16 +500,16 @@ preferably be APA styled, but I’m not too precious as long as it’s consisten
 </div>
 <p>When you render the essay template, Quarto will automatically put a list of references together and place it where it belongs<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. But how do you render the document?</p>
 </section>
-<section id="rendering" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="rendering">Rendering</h2>
+<section id="rendering" class="level2">
+<h2 class="anchored" data-anchor-id="rendering">Rendering</h2>
 <p>To convert the qmd file to a pdf, you will have to “render” the qmd file. An icon with an arrow is located in the task bar at the top whenever you have an qmd file open. Click it to start the conversion.</p>
 <div class="warning">
 <p>When there is a mistake in your qmd file, such as an unbalanced bracket in a code chunk, for example, R will not render the pdf. Therefore, render your document regularly, so that you can trace the error more easily.</p>
 </div>
 </section>
 </section>
-<section id="assessment-template" class="level1 unnumbered">
-<h1 class="unnumbered">Assessment Template</h1>
+<section id="assessment-template" class="level1">
+<h1>Assessment Template</h1>
 <p>In order to make your life as easy as possible, I have put together an Assessment Template.</p>
 <p>You can download the Undergraduate version <a href="files/Quarto/Assessment Template.zip">here</a> as a zip file. For the MA version click <a href="files/Quarto/Assessment Template_MA.zip">here</a>. Make sure you retain all files in the same folder going forward, as otherwise the document will not render:</p>
 <ul>
@@ -470,8 +519,8 @@ preferably be APA styled, but I’m not too precious as long as it’s consisten
 <li>references.bib.</li>
 </ul>
 <p>Render this document without making any changes to ensure this works. For the Undergraduate version, it should look like <a href="files/Quarto/Rendered/PAIS_Assessment_Template.pdf">this</a>, for the MA version like <a href="files/Quarto/Rendered/PAIS_Assessment_Template_MA.pdf">this</a>. Then you can start writing your assessment. Again, let me encourage you to render the document often, so that you can locate a potential mistake more easily should you receive an error message.</p>
-<section id="the-template-explained" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="the-template-explained">The Template Explained</h2>
+<section id="the-template-explained" class="level2">
+<h2 class="anchored" data-anchor-id="the-template-explained">The Template Explained</h2>
 <p>There is quite a bit of formatting going on in the qmd file, and this is what all of this code achieves:</p>
 <ul>
 <li>Light grey background to improve readability (a little present to myself for marking)</li>
@@ -490,8 +539,8 @@ preferably be APA styled, but I’m not too precious as long as it’s consisten
 <li>Code chunks are set by default not to show the code in the rendered file. Messages, warnings, and errors are suppressed</li>
 </ul>
 </section>
-<section id="assessment-submission" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="assessment-submission">Assessment Submission</h2>
+<section id="assessment-submission" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-submission">Assessment Submission</h2>
 <p>When it comes to submitting your assessment, please only submit the rendered pdf, and NOT the qmd file.</p>
 <p>Please ensure that you have copied and pasted your complete RScript into the Appendix section of the template. By complete I mean a script that takes you (or anybody else) from loading the original data sets I provide to the output you include in the report you submit on Tabula. The script should be properly annotated to make your work reproducible and easy to follow.</p>
 <script>
@@ -521,7 +570,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-agresti:2018" class="csl-entry" role="listitem">
-Agresti, A. (2018). <em><span class="nocase">Statistical Methods for the Social Sciences</span></em> (Fifth Edition). Harlow: Pearson.
+Agresti, A. (2018). <em><span class="nocase">Statistical Methods for the Social Sciences</span></em> (Fifth). Harlow: Pearson.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
