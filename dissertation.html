@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cc7f5ed53e92e183a146b29fdbcb040a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-860ef0bfa749d75d31a48fe397d9edb7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1243,23 +1243,79 @@ Table&nbsp;1: Example for Matrix Analysis: Moore’s Three Routes to Modernity (
 </section>
 <section id="quantitative-research-methods" class="level3">
 <h3 class="anchored" data-anchor-id="quantitative-research-methods">Quantitative Research Methods</h3>
-<ul>
-<li>Descriptive Statistics
-<ul>
-<li>Mean, median, mode, etc. <span class="citation" data-cites="agresti:2018">(see Agresti, 2018)</span></li>
-<li>Graphical display <span class="citation" data-cites="tufte:2001">(see Tufte, 2001)</span></li>
-</ul></li>
-<li>Inferential Statistics
-<ul>
-<li>Bivariate methods, such as correlation <span class="citation" data-cites="agresti:2018">(see Agresti, 2018)</span></li>
-<li>Multivariate methods
-<ul>
-<li>Linear regression, such as OLS <span class="citation" data-cites="gujarati:2009">(see Gujarati &amp; Porter, 2009)</span></li>
-<li>Binary dependent variable models <span class="citation" data-cites="long:1997">(see Long, 1997)</span></li>
-<li>Time-series, cross-sectional analysis <span class="citation" data-cites="beck:1998">(see Beck et al., 1998)</span></li>
-</ul></li>
-</ul></li>
-</ul>
+<p>The choice of quantitative method should begin with the research question, as it determines what kind of relationship or process you need to estimate: whether you are describing patterns, explaining variation, estimating causal effects, modelling change over time, or predicting future outcomes. The structure of your data and the measurement of your dependent variable then constrain which methods are appropriate and what assumptions must be addressed.</p>
+<p><a href="#tbl-methods-matrix" class="quarto-xref">Table&nbsp;2</a> provides a starting map from common combinations of dependent-variable type and data structure to suitable modelling approaches, influential references, and the issues that most often require attention. It is not an exhaustive catalogue of methods, but a guide to the most common choices in applied quantitative research.</p>
+<div style="height:0.5em;">
+
+</div>
+<div class="custom-html-table">
+<div style="width:97%; margin:auto;">
+<div id="tbl-methods-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-methods-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Choosing a Quantitative Method by Dependent-Variable Type and Data Structure
+</figcaption>
+<div aria-describedby="tbl-methods-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dependent variable</th>
+<th>Cross-sectional</th>
+<th>Time-series</th>
+<th>Time-series cross-sectional (panel)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Continuous</strong></td>
+<td><strong>OLS / linear regression</strong> <span class="citation" data-cites="gujarati:2009">(Gujarati &amp; Porter, 2009)</span><br><em>Watch:</em> heteroscedasticity (→ robust SEs), multicollinearity, omitted-variable bias, functional form.</td>
+<td><strong>Dynamic regression models</strong> (ARIMA/ARIMAX, ADL, error-correction models; VAR/VECM where appropriate) <span class="citation" data-cites="boxsteffensmeier:2014">(Box-Steffensmeier et al., 2014)</span><br><em>Watch:</em> non-stationarity and unit roots where relevant, serial correlation, spurious regression, cointegration.</td>
+<td><strong>Panel linear models</strong> — fixed effects, random effects, correlated random effects (CRE), or pooled models depending on assumptions; cluster-robust, panel-corrected (PCSE), or Driscoll–Kraay standard errors depending on the dependence structure <span class="citation" data-cites="beckkatz:1995 driscollkraay:1998 mundlak:1978">(Beck &amp; Katz, 1995; Driscoll &amp; Kraay, 1998; Mundlak, 1978)</span><br><em>Watch:</em> unobserved heterogeneity (FE vs.&nbsp;RE assumptions; Hausman specification test <span class="citation" data-cites="hausman:1978">(Hausman, 1978)</span>), serial correlation, cross-sectional dependence; dynamic FE models with short panels suffer from Nickell bias (→ dynamic-panel GMM).</td>
+</tr>
+<tr class="even">
+<td><strong>Binary</strong></td>
+<td><strong>Logit / probit regression</strong> <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> interpret through marginal effects or predicted probabilities rather than coefficients alone; separation (perfect prediction), rare events <span class="citation" data-cites="kingzeng:2001">(King &amp; Zeng, 2001)</span>, model fit.</td>
+<td><strong>Binary time-series models</strong> (lagged logit/probit, autoregressive event models); where the focus is time until an event, discrete-time event-history models <span class="citation" data-cites="boxsteffensmeier:2004">(Box-Steffensmeier &amp; Jones, 2004)</span><br><em>Watch:</em> temporal dependence, duration dependence, rare events, serial correlation.</td>
+<td><strong>Binary TSCS models</strong> — pooled logit/probit with time controls, fixed effects, random effects, or correlated random effects (CRE) <span class="citation" data-cites="becktucker:1998 mundlak:1978">(Beck et al., 1998; Mundlak, 1978)</span><br><em>Watch:</em> temporal dependence (including spline corrections), unobserved heterogeneity, rare events; FE logit removes units without within-unit outcome variation and may suffer incidental-parameters problems.</td>
+</tr>
+<tr class="odd">
+<td><strong>Multiple categories (nominal)</strong></td>
+<td><strong>Multinomial logit</strong> (or multinomial probit) <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> independence of irrelevant alternatives (IIA); if inappropriate → nested logit, multinomial probit, or alternative-specific models; coefficients are relative to a baseline category.</td>
+<td><strong>Competing-risks event-history models</strong> (multiple event types), or multinomial models with temporal controls <span class="citation" data-cites="boxsteffensmeier:2004">(Box-Steffensmeier &amp; Jones, 2004)</span><br><em>Watch:</em> temporal dependence, IIA, sparse outcome categories.</td>
+<td><strong>Mixed-effects multinomial logit or hierarchical multinomial models</strong> <span class="citation" data-cites="train:2009">(Train, 2009)</span><br><em>Watch:</em> unobserved heterogeneity, IIA assumptions where relevant, computational complexity; fixed-effects multinomial estimation is limited and problem-specific.</td>
+</tr>
+<tr class="even">
+<td><strong>Multiple categories (ordinal)</strong></td>
+<td><strong>Ordered logit / ordered probit</strong> <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> proportional-odds / parallel-lines assumption (→ partial proportional odds or generalised ordered models), interpretation of thresholds.</td>
+<td><strong>Ordered models with temporal controls</strong> (or transition models where change over time is the focus) <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> temporal dependence, proportional-odds assumptions, state dependence.</td>
+<td><strong>Panel ordered models</strong> — random-effects ordered logit/probit, correlated random effects, or specialised fixed-effects estimators such as the blow-up and cluster (BUC) estimator where appropriate <span class="citation" data-cites="wooldridge:2010">(Wooldridge, 2010)</span><br><em>Watch:</em> unobserved heterogeneity, proportional odds, serial dependence, limited availability of fixed-effects estimators.</td>
+</tr>
+<tr class="odd">
+<td><strong>Count</strong></td>
+<td><strong>Poisson or negative binomial regression</strong> <span class="citation" data-cites="camerontrivedi:2005">(Cameron &amp; Trivedi, 2005)</span><br><em>Watch:</em> overdispersion (→ negative binomial), excess zeros (→ hurdle/zero-inflated models), exposure or time-at-risk.</td>
+<td><strong>Time-series count models</strong> (Poisson/negative binomial with temporal controls, autoregressive count models) <span class="citation" data-cites="camerontrivedi:2005">(Cameron &amp; Trivedi, 2005)</span><br><em>Watch:</em> serial dependence, overdispersion, changing exposure, structural breaks.</td>
+<td><strong>Panel count models</strong> — fixed-effects or random-effects Poisson, negative binomial, and correlated random-effects models <span class="citation" data-cites="camerontrivedi:2005 wooldridge:2010">(Cameron &amp; Trivedi, 2005; Wooldridge, 2010)</span><br><em>Watch:</em> unobserved heterogeneity, serial dependence, overdispersion, excess zeros; FE Poisson is often preferred when controlling for time-invariant heterogeneity.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="table-note">
+<p><strong>Note:</strong> Abbreviations: ADL = autoregressive distributed lag; ARIMA = autoregressive integrated moving average; ARIMAX = autoregressive integrated moving average with exogenous variables; BUC = blow-up and cluster estimator; CRE = correlated random effects; FE = fixed effects; GMM = generalised method of moments; IIA = independence of irrelevant alternatives; PCSE = panel-corrected standard errors; RE = random effects; SE = standard errors; TSCS = time-series cross-sectional; VAR = vector autoregression; VECM = vector error-correction model.</p>
+</div>
+</div>
+</div>
+<div style="height:0.5em;">
+
+</div>
+<p>A note on the time-series column: a single long time series may be used to study temporal dynamics, forecasting, or whether events occur over time. For limited dependent variables (binary, nominal, ordinal), the relevant question is often event occurrence or transition rather than continuous evolution, meaning that event-history models or pooled time-series cross-sectional approaches are usually more common than single-unit time-series models.</p>
 <div style="height:1em;">
 
 </div>
@@ -1306,6 +1362,10 @@ Table&nbsp;1: Example for Matrix Analysis: Moore’s Three Routes to Modernity (
 <p>It is important to stress here how the different components of the research project tie together. You have posed a research question which you are seeking to answer by employing the framework of a particular theory. This theory was distilled into certain hypotheses. You have decided how to measure the core concepts in these hypotheses, and found the necessary data to do so. You then selected a particular method that is suitable for your data. By evaluating these data systematically, you are able to test your hypotheses, and thus provide an answer to your research question.</p>
 <p>This all might seem self-evident, and you might ask yourself why I am labouring this point so much. You would be surprised about the number of dissertations in which students have written a great theory section, have even gone to the trouble of operationalising their concepts properly, but then completely forgot about all of this in the analysis and did something that was at best tangentially related to what has been set up so carefully in previous sections. Please don’t be that student.</p>
 <p>If you are writing anything in this section that is unrelated to earlier parts, you have two choices: either delete it and re-calibrate yourself, or revise earlier parts to motivate this particular avenue of investigation if you deem its inclusion necessary. Otherwise, the research design breaks down, and – you guessed it – that is bad news for your mark.</p>
+<div class="bulb">
+<p><strong>Quantitative Dissertations:</strong></p>
+<p>The analysis section of a quantitative dissertation should always start with a presentations of descriptive statistics. This gives you and your readers a grounded understanding of the data’s shape, central tendencies, spread, and anomalies before any inferential claims are made. This allows the more complex analyses that follow to rest on a clear, verified foundation rather than hidden assumptions about what the data actually look like. You can include descriptive statistics very easily with the <code>datasummary()</code> function of the <code>modelsummary</code> package. This function adds small histograms to each variable, but if you need to transform variables due to skewness, it is advisable to include a before-after comparison in the appendix. For guidance on the graphical display of data, see <span class="citation" data-cites="tufte:2001">Tufte (2001)</span> and <span class="citation" data-cites="healy:2019">Healy (2019)</span>, for example.</p>
+</div>
 <p>There are two things in particular I would like to stress when it comes to writing the analysis section: (1) the presentation of your results, and (2) the language used in the interpretation of results. Let me first address presentation.</p>
 <div style="height:1em;">
 
@@ -1341,7 +1401,7 @@ Figure&nbsp;7: Democracy and Development in 2015
 </div>
 </div>
 </div>
-<p>A good table is minimal in its design. It is geometric by definition and necessitates absolutely no vertical lines. Horizontal lines should be used sparingly, only to delimit thematically distinct sections of the table (such as separating the coefficients in a regression table from the goodness of fit measures). Tables do not have captions, but titles which should sit above the table. And just as a figure, a table should contain all of the necessary information that allows a reader to read and interpret it without having to look at the text. You can see all of these principles at work in <a href="#tbl-emsur-oil" class="quarto-xref">Table&nbsp;2</a> which was produced with the <code>modelsummary</code> package in R <span class="citation" data-cites="arelbundock:2022">(Arel-Bundock, 2022)</span>.</p>
+<p>A good table is minimal in its design. It is geometric by definition and necessitates absolutely no vertical lines. Horizontal lines should be used sparingly, only to delimit thematically distinct sections of the table (such as separating the coefficients in a regression table from the goodness of fit measures). Tables do not have captions, but titles which should sit above the table. And just as a figure, a table should contain all of the necessary information that allows a reader to read and interpret it without having to look at the text. You can see all of these principles at work in <a href="#tbl-emsur-oil" class="quarto-xref">Table&nbsp;3</a> which was produced with the <code>modelsummary</code> package in R <span class="citation" data-cites="arelbundock:2022">(Arel-Bundock, 2022)</span>.</p>
 <div style="height:0.5em;">
 
 </div>
@@ -1350,7 +1410,7 @@ Figure&nbsp;7: Democracy and Development in 2015
 <div id="tbl-emsur-oil" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-emsur-oil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Income, Oil, and their Interaction in Democratic Emergence and Survival Globally, 1960–2018
+Table&nbsp;3: Income, Oil, and their Interaction in Democratic Emergence and Survival Globally, 1960–2018
 </figcaption>
 <div aria-describedby="tbl-emsur-oil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1360,29 +1420,29 @@ Table&nbsp;2: Income, Oil, and their Interaction in Democratic Emergence and Sur
 
     <script>
       // Create table-specific functions using external factory
-      const tableFns_xibtzurspg59j4407jd7 = TinyTable.createTableFunctions("tinytable_xibtzurspg59j4407jd7");
+      const tableFns_jn0k26zw0at29j9v4w5k = TinyTable.createTableFunctions("tinytable_jn0k26zw0at29j9v4w5k");
       // tinytable span after
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: '-1', j: 5 } ], css_id: 'tinytable_css_emb6fq7pazztwhggqb0e',}, 
-          { positions: [ { i: '-1', j: 3 }, { i: '-1', j: 4 }, { i: '-1', j: 7 }, { i: '-1', j: 8 }, { i: '-1', j: 9 } ], css_id: 'tinytable_css_s010t0ls0y74wgu8mk31',}, 
-          { positions: [ { i: '-2', j: 3 }, { i: '-2', j: 4 }, { i: '-2', j: 5 }, { i: '-2', j: 6 }, { i: '-2', j: 7 }, { i: '-2', j: 8 }, { i: '-2', j: 9 } ], css_id: 'tinytable_css_0pub4efas0l7vtgs8owc',}, 
-          { positions: [ { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '11', j: 4 }, { i: '11', j: 5 }, { i: '11', j: 6 }, { i: '11', j: 7 }, { i: '11', j: 8 }, { i: '11', j: 9 } ], css_id: 'tinytable_css_2dagp51x4ylifaqpxxf0',}, 
-          { positions: [ { i: '0', j: 2 }, { i: '8', j: 2 }, { i: '0', j: 3 }, { i: '8', j: 3 }, { i: '0', j: 4 }, { i: '8', j: 4 }, { i: '0', j: 5 }, { i: '8', j: 5 }, { i: '0', j: 6 }, { i: '8', j: 6 }, { i: '0', j: 7 }, { i: '8', j: 7 }, { i: '0', j: 8 }, { i: '8', j: 8 }, { i: '0', j: 9 }, { i: '8', j: 9 } ], css_id: 'tinytable_css_hjoyk1uw6k3wshwisuen',}, 
-          { positions: [ { i: '-1', j: 2 }, { i: '-1', j: 6 } ], css_id: 'tinytable_css_ojwd30bogvoqayf3xqbs',}, 
-          { positions: [ { i: '-2', j: 2 } ], css_id: 'tinytable_css_we9in07jkbo0fndoit1d',}, 
-          { positions: [ { i: '11', j: 1 } ], css_id: 'tinytable_css_x3l5vx2aqythbbiswsbt',}, 
-          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 } ], css_id: 'tinytable_css_usxqdzm4kpqe9tquj1cc',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_mbvpqy0sgcmifl43yvwx',}, 
-          { positions: [ { i: '-1', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 } ], css_id: 'tinytable_css_2xlvibldh4ww7b03n1t7',}, 
-          { positions: [ { i: '-2', j: 1 } ], css_id: 'tinytable_css_aaoxzuh87xktqi2tyb8a',}, 
+          { positions: [ { i: '-1', j: 5 } ], css_id: 'tinytable_css_5y4drbftbrhdwb82i8gi',}, 
+          { positions: [ { i: '-1', j: 3 }, { i: '-1', j: 4 }, { i: '-1', j: 7 }, { i: '-1', j: 8 }, { i: '-1', j: 9 } ], css_id: 'tinytable_css_7ur1nsneya2f6tl4x21j',}, 
+          { positions: [ { i: '-2', j: 3 }, { i: '-2', j: 4 }, { i: '-2', j: 5 }, { i: '-2', j: 6 }, { i: '-2', j: 7 }, { i: '-2', j: 8 }, { i: '-2', j: 9 } ], css_id: 'tinytable_css_isn573oggtzeow52mkzh',}, 
+          { positions: [ { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '11', j: 4 }, { i: '11', j: 5 }, { i: '11', j: 6 }, { i: '11', j: 7 }, { i: '11', j: 8 }, { i: '11', j: 9 } ], css_id: 'tinytable_css_rs3k1fs9tiduzu8wk83r',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '8', j: 2 }, { i: '0', j: 3 }, { i: '8', j: 3 }, { i: '0', j: 4 }, { i: '8', j: 4 }, { i: '0', j: 5 }, { i: '8', j: 5 }, { i: '0', j: 6 }, { i: '8', j: 6 }, { i: '0', j: 7 }, { i: '8', j: 7 }, { i: '0', j: 8 }, { i: '8', j: 8 }, { i: '0', j: 9 }, { i: '8', j: 9 } ], css_id: 'tinytable_css_fhtyq7qp80w5ef3rhq7w',}, 
+          { positions: [ { i: '-1', j: 2 }, { i: '-1', j: 6 } ], css_id: 'tinytable_css_s1vlfkvp50waxf45vmfq',}, 
+          { positions: [ { i: '-2', j: 2 } ], css_id: 'tinytable_css_4s33vupkp4runh0uxmhr',}, 
+          { positions: [ { i: '11', j: 1 } ], css_id: 'tinytable_css_wcdovpz2cg36rzfn2epg',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 } ], css_id: 'tinytable_css_3rnvt7kyuhcyhqjhfuj1',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_qtgsdhx4nz4311zxsg9f',}, 
+          { positions: [ { i: '-1', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 } ], css_id: 'tinytable_css_hycj4sgv69gh0vviente',}, 
+          { positions: [ { i: '-2', j: 1 } ], css_id: 'tinytable_css_soxpzma8tztv0a46rnas',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  tableFns_xibtzurspg59j4407jd7.styleCell(cell.i, cell.j, group.css_id);
+                  tableFns_jn0k26zw0at29j9v4w5k.styleCell(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -1391,21 +1451,21 @@ Table&nbsp;2: Income, Oil, and their Interaction in Democratic Emergence and Sur
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
     <style>
     /* tinytable css entries after */
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_emb6fq7pazztwhggqb0e, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_emb6fq7pazztwhggqb0e {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 3%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_s010t0ls0y74wgu8mk31, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_s010t0ls0y74wgu8mk31 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_0pub4efas0l7vtgs8owc, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_0pub4efas0l7vtgs8owc {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_2dagp51x4ylifaqpxxf0, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_2dagp51x4ylifaqpxxf0 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_hjoyk1uw6k3wshwisuen, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_hjoyk1uw6k3wshwisuen {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_ojwd30bogvoqayf3xqbs, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_ojwd30bogvoqayf3xqbs {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_we9in07jkbo0fndoit1d, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_we9in07jkbo0fndoit1d {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_x3l5vx2aqythbbiswsbt, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_x3l5vx2aqythbbiswsbt {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_usxqdzm4kpqe9tquj1cc, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_usxqdzm4kpqe9tquj1cc { text-align: left }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_mbvpqy0sgcmifl43yvwx, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_mbvpqy0sgcmifl43yvwx {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_2xlvibldh4ww7b03n1t7, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_2xlvibldh4ww7b03n1t7 { text-align: center }
-    #tinytable_xibtzurspg59j4407jd7 td.tinytable_css_aaoxzuh87xktqi2tyb8a, #tinytable_xibtzurspg59j4407jd7 th.tinytable_css_aaoxzuh87xktqi2tyb8a {  position: relative; --border-bottom: 0; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_5y4drbftbrhdwb82i8gi, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_5y4drbftbrhdwb82i8gi {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 3%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_7ur1nsneya2f6tl4x21j, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_7ur1nsneya2f6tl4x21j {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_isn573oggtzeow52mkzh, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_isn573oggtzeow52mkzh {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_rs3k1fs9tiduzu8wk83r, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_rs3k1fs9tiduzu8wk83r {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_fhtyq7qp80w5ef3rhq7w, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_fhtyq7qp80w5ef3rhq7w {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_s1vlfkvp50waxf45vmfq, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_s1vlfkvp50waxf45vmfq {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_4s33vupkp4runh0uxmhr, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_4s33vupkp4runh0uxmhr {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_wcdovpz2cg36rzfn2epg, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_wcdovpz2cg36rzfn2epg {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_3rnvt7kyuhcyhqjhfuj1, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_3rnvt7kyuhcyhqjhfuj1 { text-align: left }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_qtgsdhx4nz4311zxsg9f, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_qtgsdhx4nz4311zxsg9f {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_hycj4sgv69gh0vviente, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_hycj4sgv69gh0vviente { text-align: center }
+    #tinytable_jn0k26zw0at29j9v4w5k td.tinytable_css_soxpzma8tztv0a46rnas, #tinytable_jn0k26zw0at29j9v4w5k th.tinytable_css_soxpzma8tztv0a46rnas {  position: relative; --border-bottom: 0; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
     </style>
     <div class="container">
-      <table class="tinytable" id="tinytable_xibtzurspg59j4407jd7" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="tinytable" id="tinytable_jn0k26zw0at29j9v4w5k" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
         <thead>
 <tr>
@@ -1585,13 +1645,13 @@ Table&nbsp;2: Income, Oil, and their Interaction in Democratic Emergence and Sur
 <li>Use short sentences, so that a reader does not have to struggle with complex grammar as well as understanding the content.</li>
 </ol>
 </div>
-<p>I have compiled a few examples of good and bad interpretation in <a href="#tbl-goodbad" class="quarto-xref">Table&nbsp;3</a>. You will notice that the good interpretations are generally longer than the bad ones. This is because they provide context, explain the implications of the results, and communicate them in a way that is accessible to a wider audience.</p>
+<p>I have compiled a few examples of good and bad interpretation in <a href="#tbl-goodbad" class="quarto-xref">Table&nbsp;4</a>. You will notice that the good interpretations are generally longer than the bad ones. This is because they provide context, explain the implications of the results, and communicate them in a way that is accessible to a wider audience.</p>
 <div class="custom-html-table">
 <div style="width:95%; margin:auto;">
 <div id="tbl-goodbad" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-goodbad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Examples of Good and Bad Interpretation
+Table&nbsp;4: Examples of Good and Bad Interpretation
 </figcaption>
 <div aria-describedby="tbl-goodbad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -2000,9 +2060,6 @@ Figure&nbsp;8: Examples from Template
 <div id="ref-adcock:2001" class="csl-entry" role="listitem">
 Adcock, R., &amp; Collier, D. (2001). <span class="nocase">Measurement Validity: A Shared Standard for Qualitative and Quantitative Research</span>. <em><span>American Political Science Review</span></em>, <em>95</em>(3), 529–546.
 </div>
-<div id="ref-agresti:2018" class="csl-entry" role="listitem">
-Agresti, A. (2018). <em><span class="nocase">Statistical Methods for the Social Sciences</span></em> (Fifth). Harlow: Pearson.
-</div>
 <div id="ref-ake:1993" class="csl-entry" role="listitem">
 Ake, C. (1993). <span class="nocase">The Unique Case of African Democracy</span>. <em><span>International Affairs</span></em>, <em>69</em>(2), 239–244. <a href="https://doi.org/10.2307/2621592">https://doi.org/10.2307/2621592</a>
 </div>
@@ -2010,13 +2067,25 @@ Ake, C. (1993). <span class="nocase">The Unique Case of African Democracy</span>
 Arel-Bundock, V. (2022). <span class="nocase">modelsummary: Data and Model Summaries in R</span>. <em>Journal of Statistical Software</em>, <em>103</em>(1), 1–23.
 </div>
 <div id="ref-barrios:2010" class="csl-entry" role="listitem">
-Barrios, S., Bertinelli, L., &amp; Strobl, E. (2010). Trends in rainfall and economic growth in africa: A neglected cause of the african growth tragedy. <em>Review of Economics and Statistics</em>, <em>92</em>(2), 350–366. <a href="https://doi.org/10.1162/rest.2010.11212">https://doi.org/10.1162/rest.2010.11212</a>
+Barrios, S., Bertinelli, L., &amp; Strobl, E. (2010). <span class="nocase">Trends in Rainfall and Economic Growth in Africa: A Neglected Cause of the African Growth Tragedy</span>. <em>Review of Economics and Statistics</em>, <em>92</em>(2), 350–366. <a href="https://doi.org/10.1162/rest.2010.11212">https://doi.org/10.1162/rest.2010.11212</a>
 </div>
-<div id="ref-beck:1998" class="csl-entry" role="listitem">
-Beck, N., Katz, J. N., &amp; Tucker, R. (1998). <span class="nocase">Taking Time Seriously: Time-Series-Cross-Section Analysis with a Binary Dependent Variable</span>. <em><span>American Journal of Political Science</span></em>, <em>42</em>(4), 1260–1288.
+<div id="ref-beckkatz:1995" class="csl-entry" role="listitem">
+Beck, N., &amp; Katz, J. N. (1995). <span class="nocase">What to Do (and Not to Do) with Time-Series Cross-Section Data</span>. <em>American Political Science Review</em>, <em>89</em>(3), 634–647. <a href="https://doi.org/10.2307/2082979">https://doi.org/10.2307/2082979</a>
+</div>
+<div id="ref-becktucker:1998" class="csl-entry" role="listitem">
+Beck, N., Katz, J. N., &amp; Tucker, R. (1998). <span class="nocase">Taking Time Seriously: Time-Series–Cross-Section Analysis with a Binary Dependent Variable</span>. <em>American Journal of Political Science</em>, <em>42</em>(4), 1260–1288.
 </div>
 <div id="ref-boix:2003" class="csl-entry" role="listitem">
 Boix, C., &amp; Stokes, S. (2003). <span>Endogenous Democratization</span>. <em><span>World Politics</span></em>, <em>55</em>, 517–549. https://doi.org/<a href="https://doi.org/10.1353/wp.2003.0019">https://doi.org/10.1353/wp.2003.0019</a>
+</div>
+<div id="ref-boxsteffensmeier:2014" class="csl-entry" role="listitem">
+Box-Steffensmeier, J. M., Freeman, J. R., Hitchcock, D. J., &amp; Pevehouse, J. C. W. (2014). <em><span class="nocase">Time Series Analysis for the Social Sciences</span></em>. Cambridge University Press.
+</div>
+<div id="ref-boxsteffensmeier:2004" class="csl-entry" role="listitem">
+Box-Steffensmeier, J. M., &amp; Jones, B. S. (2004). <em><span class="nocase">Event History Modeling: A Guide for Social Scientists</span></em>. Cambridge University Press.
+</div>
+<div id="ref-camerontrivedi:2005" class="csl-entry" role="listitem">
+Cameron, A. C., &amp; Trivedi, P. K. (2005). <em><span class="nocase">Microeconometrics: Methods and Applications</span></em>. Cambridge University Press.
 </div>
 <div id="ref-clark:2019" class="csl-entry" role="listitem">
 Clark, T., Foster, L., &amp; Bryman, A. (2019). <em><span class="nocase">How to do your Social Research Project or Dissertation</span></em>. Oxford University Press. <a href="https://doi.org/10.1093/hepl/9780198811060.001.0001">https://doi.org/10.1093/hepl/9780198811060.001.0001</a>
@@ -2027,6 +2096,9 @@ Clark, T., Foster, L., &amp; Bryman, A. (2021). <em><span class="nocase">Bryman�
 <div id="ref-dahl:1971" class="csl-entry" role="listitem">
 Dahl, R. A. (1971). <em><span class="nocase">Polyarchy: Participation and Opposition</span></em>. New Haven, CT: Yale University Press.
 </div>
+<div id="ref-driscollkraay:1998" class="csl-entry" role="listitem">
+Driscoll, J. C., &amp; Kraay, A. C. (1998). <span class="nocase">Consistent Covariance Matrix Estimation with Spatially Dependent Panel Data</span>. <em>Review of Economics and Statistics</em>, <em>80</em>(4), 549–560. <a href="https://doi.org/10.1162/003465398557825">https://doi.org/10.1162/003465398557825</a>
+</div>
 <div id="ref-epstein:2006" class="csl-entry" role="listitem">
 Epstein, D. L., Bates, R., Goldstone, J., Kristensen, I., &amp; O’Halloran, S. (2006). <span>Democratic Transitions</span>. <em><span>American Journal of Political Science</span></em>, <em>50</em>(3), 551–569. <a href="https://doi.org/10.1111/j.1540-5907.2006.00201.x">https://doi.org/10.1111/j.1540-5907.2006.00201.x</a>
 </div>
@@ -2036,20 +2108,26 @@ Gerring, J. (2007). <span class="nocase">The Case Study: What it is and What it 
 <div id="ref-gujarati:2009" class="csl-entry" role="listitem">
 Gujarati, D. N., &amp; Porter, D. C. (2009). <em><span>Basic Econometrics</span></em> (Fifth International Edition). New York: McGraw-Hill.
 </div>
+<div id="ref-hausman:1978" class="csl-entry" role="listitem">
+Hausman, J. A. (1978). <span class="nocase">Specification Tests in Econometrics</span>. <em>Econometrica</em>, <em>46</em>(6), 1251–1271. <a href="https://doi.org/10.2307/1913827">https://doi.org/10.2307/1913827</a>
+</div>
 <div id="ref-healy:2019" class="csl-entry" role="listitem">
 Healy, K. (2019). <em><span>Data Visualization – A Practical Introduction</span></em>. Princeton, NJ: Princeton University Press.
 </div>
 <div id="ref-hume:1748" class="csl-entry" role="listitem">
-Hume, D. (1748). <em>An enquiry concerning human understanding</em>. A. Millar.
+Hume, D. (1748). <em><span>An Enquiry Concerning Human Understanding</span></em>. A. Millar.
 </div>
 <div id="ref-hume:1999" class="csl-entry" role="listitem">
-Hume, D. (1999). <em><span class="nocase">An enquiry concerning human understanding</span></em> (T. L. Beauchamp, Ed.). Oxford University Press.
+Hume, D. (1999). <em><span>An Enquiry Concerning Human Understanding</span></em> (T. L. Beauchamp, Ed.). Oxford University Press.
 </div>
 <div id="ref-ivory:2021" class="csl-entry" role="listitem">
 Ivory, S. B. (2021). <em><span class="nocase">Becoming a Critical Thinker – For your university studies and beyond</span></em>. Oxford: Oxford University Press.
 </div>
 <div id="ref-joergensen:2002" class="csl-entry" role="listitem">
 Jørgensen, M., &amp; Phillips, L. (2002). <em><span class="nocase">Discourse Analysis as Theory and Method</span></em>. Sage. <a href="https://doi.org/10.4135/9781849208871">https://doi.org/10.4135/9781849208871</a>
+</div>
+<div id="ref-kingzeng:2001" class="csl-entry" role="listitem">
+King, G., &amp; Zeng, L. (2001). <span class="nocase">Logistic Regression in Rare Events Data</span>. <em>Political Analysis</em>, <em>9</em>(2), 137–163. <a href="https://doi.org/10.1093/oxfordjournals.pan.a004868">https://doi.org/10.1093/oxfordjournals.pan.a004868</a>
 </div>
 <div id="ref-krippendorff:2019" class="csl-entry" role="listitem">
 Krippendorff, K. (2019). <em><span class="nocase">Content Analysis: An Introduction to Its Methodology</span></em>. SAGE Publications, Inc. <a href="https://doi.org/10.4135/9781071878781">https://doi.org/10.4135/9781071878781</a>
@@ -2072,23 +2150,29 @@ Miles, M. B., Huberman, A. M., &amp; Saldaña, J. (2014). <em><span>Qualitative 
 <div id="ref-mill:1888" class="csl-entry" role="listitem">
 Mill, J. S. (1888). <em><span class="nocase">A System of Logic, Ratiocinative and Inductive</span></em> (Eighth Edition). New York: Harper; Brothers. <a href="https://doi.org/10.4324/9781003009450-5">https://doi.org/10.4324/9781003009450-5</a>
 </div>
+<div id="ref-mundlak:1978" class="csl-entry" role="listitem">
+Mundlak, Y. (1978). <span class="nocase">On the Pooling of Time Series and Cross Section Data</span>. <em>Econometrica</em>, <em>46</em>(1), 69–85. <a href="https://doi.org/10.2307/1913646">https://doi.org/10.2307/1913646</a>
+</div>
 <div id="ref-oxford" class="csl-entry" role="listitem">
 Oxford Learner’s Dictionaries. (n.d.). available online at <a href="https://www.oxfordlearnersdictionaries.com/" class="uri">https://www.oxfordlearnersdictionaries.com/</a>.
 </div>
 <div id="ref-popper:1935" class="csl-entry" role="listitem">
-Popper, K. R. (1935). <em>Logik der forschung. Zur erkenntnistheorie der modernen naturwissenschaft</em> (Vol. 9). Verlag von Julius Springer.
+Popper, K. R. (1935). <em><span class="nocase">Logik der Forschung. Zur Erkenntnistheorie der modernen Naturwissenschaft</span></em> (Vol. 9). Verlag von Julius Springer.
 </div>
 <div id="ref-popper:2005" class="csl-entry" role="listitem">
-Popper, K. R. (2005). <em>The logic of scientific discovery</em>. Routledge. <a href="https://doi.org/10.4324/9780203994627">https://doi.org/10.4324/9780203994627</a>
+Popper, K. R. (2005). <em><span class="nocase">The Logic of Scientific Discovery</span></em>. Routledge. <a href="https://doi.org/10.4324/9780203994627">https://doi.org/10.4324/9780203994627</a>
 </div>
 <div id="ref-prz:2000" class="csl-entry" role="listitem">
 Przeworski, A., Alvarez, M. E., Cheibub, J. A., &amp; Limongi, F. (2000). <em><span class="nocase">Democracy and Development - Political Institutions and Well-Being in the World, 1950-1990</span></em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511804946">https://doi.org/10.1017/CBO9780511804946</a>
 </div>
 <div id="ref-rihoux:2006" class="csl-entry" role="listitem">
-Rihoux, B. (2006). Qualitative comparative analysis (QCA) and related systematic comparative methods: Recent advances and remaining challenges for social science research. <em>International Sociology</em>, <em>21</em>(5), 679–706.
+Rihoux, B. (2006). <span class="nocase">Qualitative Comparative Analysis (QCA) and Related Systematic Comparative Methods: Recent Advances and Remaining Challenges for Social Science Research</span>. <em>International Sociology</em>, <em>21</em>(5), 679–706.
 </div>
 <div id="ref-stimson:nd" class="csl-entry" role="listitem">
 Stimson, J. A. (n.d.). <em><span class="nocase">Professional Writing in Political Science: A Highly opinionated Essay</span></em>. available online at <a href="http://stimson.web.unc.edu/files/2018/02/Writing.pdf" class="uri">http://stimson.web.unc.edu/files/2018/02/Writing.pdf</a>.
+</div>
+<div id="ref-train:2009" class="csl-entry" role="listitem">
+Train, K. E. (2009). <em><span class="nocase">Discrete Choice Methods with Simulation</span></em> (2nd ed.). Cambridge University Press.
 </div>
 <div id="ref-tufte:2001" class="csl-entry" role="listitem">
 Tufte, E. R. (2001). <em><span class="nocase">The Visual Display of Quantitative Information</span></em> (Second). Cheshire, Conn: Graphics Press.
@@ -2098,6 +2182,9 @@ Walliman, N. (2020). <em><span class="nocase">Your Research Project – Designin
 </div>
 <div id="ref-wickham:2016" class="csl-entry" role="listitem">
 Wickham, H. (2016). <em><span class="nocase">ggplot2: Elegant Graphics for Data Analysis</span></em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>
+</div>
+<div id="ref-wooldridge:2010" class="csl-entry" role="listitem">
+Wooldridge, J. M. (2010). <em><span class="nocase">Econometric Analysis of Cross Section and Panel Data</span></em> (2nd ed.). MIT Press.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
