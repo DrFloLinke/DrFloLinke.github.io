@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-87256dde5f8a0dba1470d5a43d71b0e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-08419e96a1f0f4e8c9844648fa6c8c28.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1371,10 +1371,10 @@ Table&nbsp;2: Choosing a Quantitative Method by Dependent-Variable Type and Data
 <div aria-describedby="tbl-methods-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 29%">
-<col style="width: 29%">
-<col style="width: 29%">
+<col style="width: 10%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 31%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1387,33 +1387,127 @@ Table&nbsp;2: Choosing a Quantitative Method by Dependent-Variable Type and Data
 <tbody>
 <tr class="odd">
 <td><strong>Continuous</strong></td>
-<td><strong>OLS / linear regression</strong> <span class="citation" data-cites="gujarati:2009">(Gujarati &amp; Porter, 2009)</span><br><em>Watch:</em> heteroscedasticity (→ robust SEs); multicollinearity (inflates the SEs of the collinear terms but doesn’t bias estimates — only a concern if those are your variables of interest); omitted-variable bias; functional form (→ check residual plots; add polynomials/splines).</td>
-<td><strong>Dynamic regression models</strong> (ARIMA/ARIMAX, ADL, error-correction models; VAR/VECM where appropriate) <span class="citation" data-cites="boxsteffensmeier:2014">(Box-Steffensmeier et al., 2014)</span><br><em>Watch:</em> non-stationarity / unit roots (→ spurious regression with inflated significance; difference the data, or use an error-correction model if series cointegrate); serial correlation (→ add lags / ADL).</td>
-<td><strong>Panel linear models</strong> — fixed effects, random effects, correlated random effects (CRE), or pooled models depending on assumptions; cluster-robust, panel-corrected (PCSE), or Driscoll–Kraay standard errors depending on the dependence structure <span class="citation" data-cites="beckkatz:1995 driscollkraay:1998 mundlak:1978">(Beck &amp; Katz, 1995; Driscoll &amp; Kraay, 1998; Mundlak, 1978)</span><br><em>Watch:</em> unobserved heterogeneity (FE vs.&nbsp;RE assumptions; Hausman specification test <span class="citation" data-cites="hausman:1978">(Hausman, 1978)</span>); serial correlation and cross-sectional dependence (→ choose SEs accordingly: cluster-robust, PCSE, or Driscoll–Kraay); slow-moving variables provide limited within-unit variation under FE <span class="citation" data-cites="pluemper:2007">(Plümper &amp; Troeger, 2007)</span>; dynamic FE models with short panels suffer from Nickell bias (→ dynamic-panel GMM).</td>
+<td><p><strong>OLS / linear regression</strong> <span class="citation" data-cites="gujarati:2009">(Gujarati &amp; Porter, 2009)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>heteroscedasticity (→ robust SEs)</li>
+<li>multicollinearity — inflates the SEs of the collinear terms but doesn’t bias estimates; only a concern if those are your variables of interest</li>
+<li>omitted-variable bias</li>
+<li>functional form (→ check residual plots; add polynomials/splines)</li>
+</ul></td>
+<td><p><strong>Dynamic regression models</strong> (ARIMA/ARIMAX, ADL, error-correction models; VAR/VECM where appropriate) <span class="citation" data-cites="boxsteffensmeier:2014">(Box-Steffensmeier et al., 2014)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>non-stationarity / unit roots (→ spurious regression with inflated significance; difference the data, or use an error-correction model if series cointegrate)</li>
+<li>serial correlation (→ add lags / ADL)</li>
+</ul></td>
+<td><p><strong>Panel linear models</strong> — fixed effects, random effects, correlated random effects (CRE), or pooled models depending on assumptions; cluster-robust, panel-corrected (PCSE), or Driscoll–Kraay standard errors depending on the dependence structure <span class="citation" data-cites="beckkatz:1995 driscollkraay:1998 mundlak:1978">(Beck &amp; Katz, 1995; Driscoll &amp; Kraay, 1998; Mundlak, 1978)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>unobserved heterogeneity (FE vs.&nbsp;RE assumptions; Hausman specification test <span class="citation" data-cites="hausman:1978">(Hausman, 1978)</span>)</li>
+<li>serial correlation and cross-sectional dependence (→ choose SEs accordingly: cluster-robust, PCSE, or Driscoll–Kraay)</li>
+<li>slow-moving variables provide limited within-unit variation under FE <span class="citation" data-cites="pluemper:2007">(Plümper &amp; Troeger, 2007)</span></li>
+<li>dynamic FE models with short panels suffer from Nickell bias (→ dynamic-panel GMM)</li>
+</ul></td>
 </tr>
 <tr class="even">
 <td><strong>Binary</strong></td>
-<td><strong>Logit / probit regression</strong> <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> interpret through marginal effects or predicted probabilities, not coefficients alone; separation (perfect prediction → non-convergence; consider penalised/Firth logit); rare events <span class="citation" data-cites="kingzeng:2001">(King &amp; Zeng, 2001)</span>.</td>
-<td><strong>Binary time-series models</strong> (lagged logit/probit, autoregressive event models); where the focus is time until an event, discrete-time event-history models <span class="citation" data-cites="boxsteffensmeier:2004">(Box-Steffensmeier &amp; Jones, 2004)</span><br><em>Watch:</em> duration / temporal dependence (→ model time-since-event with dummies or splines <span class="citation" data-cites="becktucker:1998">(Beck et al., 1998)</span>); rare events.</td>
-<td><strong>Binary TSCS models</strong> — pooled logit/probit with time controls, fixed effects, random effects, or correlated random effects (CRE) <span class="citation" data-cites="becktucker:1998 mundlak:1978">(Beck et al., 1998; Mundlak, 1978)</span><br><em>Watch:</em> temporal dependence (→ spline or cubic-polynomial corrections); unobserved heterogeneity; rare events; FE logit drops units without within-unit outcome variation and suffers incidental-parameters bias when the time dimension is short.</td>
+<td><p><strong>Logit / probit regression</strong> <span class="citation" data-cites="long:1997">(Long, 1997)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>interpret through marginal effects or predicted probabilities, not coefficients alone</li>
+<li>separation (perfect prediction → non-convergence; consider penalised/Firth logit)</li>
+<li>rare events <span class="citation" data-cites="kingzeng:2001">(King &amp; Zeng, 2001)</span></li>
+</ul></td>
+<td><p><strong>Binary time-series models</strong> (lagged logit/probit, autoregressive event models); where the focus is time until an event, discrete-time event-history models <span class="citation" data-cites="boxsteffensmeier:2004">(Box-Steffensmeier &amp; Jones, 2004)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>duration / temporal dependence (→ model time-since-event with dummies or splines <span class="citation" data-cites="becktucker:1998">(Beck et al., 1998)</span>)</li>
+<li>rare events</li>
+</ul></td>
+<td><p><strong>Binary TSCS models</strong> — pooled logit/probit with time controls, fixed effects, random effects, or correlated random effects (CRE) <span class="citation" data-cites="becktucker:1998 mundlak:1978">(Beck et al., 1998; Mundlak, 1978)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>temporal dependence (→ spline or cubic-polynomial corrections)</li>
+<li>unobserved heterogeneity</li>
+<li>rare events</li>
+<li>FE logit drops units without within-unit outcome variation and suffers incidental-parameters bias when the time dimension is short</li>
+</ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Multiple categories (nominal)</strong></td>
-<td><strong>Multinomial logit</strong> (or multinomial probit) <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> independence of irrelevant alternatives (IIA; if violated → nested logit, multinomial probit, or alternative-specific models); coefficients are relative to a baseline category.</td>
-<td><strong>Competing-risks event-history models</strong> (multiple event types), or multinomial models with temporal controls <span class="citation" data-cites="boxsteffensmeier:2004">(Box-Steffensmeier &amp; Jones, 2004)</span><br><em>Watch:</em> temporal dependence (→ time controls); IIA; sparse outcome categories (→ collapse rare categories).</td>
-<td><strong>Mixed-effects multinomial logit or hierarchical multinomial models</strong> <span class="citation" data-cites="train:2009">(Train, 2009)</span><br><em>Watch:</em> unobserved heterogeneity; IIA where relevant; models may fail to converge (→ simplify the random-effects structure); fixed-effects multinomial estimation is limited and problem-specific.</td>
+<td><p><strong>Multinomial logit</strong> (or multinomial probit) <span class="citation" data-cites="long:1997">(Long, 1997)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>independence of irrelevant alternatives (IIA; if violated → nested logit, multinomial probit, or alternative-specific models)</li>
+<li>coefficients are relative to a baseline category</li>
+</ul></td>
+<td><p><strong>Competing-risks event-history models</strong> (multiple event types), or multinomial models with temporal controls <span class="citation" data-cites="boxsteffensmeier:2004">(Box-Steffensmeier &amp; Jones, 2004)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>temporal dependence (→ time controls)</li>
+<li>IIA</li>
+<li>sparse outcome categories (→ collapse rare categories)</li>
+</ul></td>
+<td><p><strong>Mixed-effects multinomial logit or hierarchical multinomial models</strong> <span class="citation" data-cites="train:2009">(Train, 2009)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>unobserved heterogeneity</li>
+<li>IIA where relevant</li>
+<li>models may fail to converge (→ simplify the random-effects structure)</li>
+<li>fixed-effects multinomial estimation is limited and problem-specific</li>
+</ul></td>
 </tr>
 <tr class="even">
 <td><strong>Multiple categories (ordinal)</strong></td>
-<td><strong>Ordered logit / ordered probit</strong> <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> proportional-odds / parallel-lines assumption (→ partial proportional odds or generalised ordered models); interpretation of thresholds.</td>
-<td><strong>Ordered models with temporal controls</strong> (or transition models where change over time is the focus) <span class="citation" data-cites="long:1997">(Long, 1997)</span><br><em>Watch:</em> temporal dependence (→ time controls); proportional-odds assumption; state dependence (→ transition or lagged-outcome models).</td>
-<td><strong>Panel ordered models</strong> — random-effects ordered logit/probit, correlated random effects, or specialised fixed-effects estimators such as the blow-up and cluster (BUC) estimator where appropriate <span class="citation" data-cites="wooldridge:2010">(Wooldridge, 2010)</span><br><em>Watch:</em> unobserved heterogeneity; proportional odds; serial dependence; consistent fixed-effects estimators are limited (→ BUC where applicable).</td>
+<td><p><strong>Ordered logit / ordered probit</strong> <span class="citation" data-cites="long:1997">(Long, 1997)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>proportional-odds / parallel-lines assumption (→ partial proportional odds or generalised ordered models)</li>
+<li>interpretation of thresholds</li>
+</ul></td>
+<td><p><strong>Ordered models with temporal controls</strong> (or transition models where change over time is the focus) <span class="citation" data-cites="long:1997">(Long, 1997)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>temporal dependence (→ time controls)</li>
+<li>proportional-odds assumption</li>
+<li>state dependence (→ transition or lagged-outcome models)</li>
+</ul></td>
+<td><p><strong>Panel ordered models</strong> — random-effects ordered logit/probit, correlated random effects, or specialised fixed-effects estimators such as the blow-up and cluster (BUC) estimator where appropriate <span class="citation" data-cites="wooldridge:2010">(Wooldridge, 2010)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>unobserved heterogeneity</li>
+<li>proportional odds</li>
+<li>serial dependence</li>
+<li>consistent fixed-effects estimators are limited (→ BUC where applicable)</li>
+</ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Count</strong></td>
-<td><strong>Poisson or negative binomial regression</strong> <span class="citation" data-cites="camerontrivedi:2005">(Cameron &amp; Trivedi, 2005)</span><br><em>Watch:</em> overdispersion (→ negative binomial); excess zeros (→ hurdle / zero-inflated models); exposure or time-at-risk (→ offset).</td>
-<td><strong>Time-series count models</strong> (Poisson/negative binomial with temporal controls, autoregressive count models) <span class="citation" data-cites="camerontrivedi:2005">(Cameron &amp; Trivedi, 2005)</span><br><em>Watch:</em> serial dependence (→ lagged counts or temporal controls); overdispersion (→ negative binomial); changing exposure (→ offset for time-at-risk); structural breaks (→ test for and model regime shifts).</td>
-<td><strong>Panel count models</strong> — fixed-effects or random-effects Poisson, negative binomial, and correlated random-effects models <span class="citation" data-cites="camerontrivedi:2005 wooldridge:2010">(Cameron &amp; Trivedi, 2005; Wooldridge, 2010)</span><br><em>Watch:</em> unobserved heterogeneity; serial dependence; overdispersion (→ negative binomial); excess zeros (→ zero-inflated); FE Poisson is often preferred for time-invariant heterogeneity (consistent even in short panels), provided the conditional-mean specification is appropriate.</td>
+<td><p><strong>Poisson or negative binomial regression</strong> <span class="citation" data-cites="camerontrivedi:2005">(Cameron &amp; Trivedi, 2005)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>overdispersion (→ negative binomial)</li>
+<li>excess zeros (→ hurdle / zero-inflated models)</li>
+<li>exposure or time-at-risk (→ offset)</li>
+</ul></td>
+<td><p><strong>Time-series count models</strong> (Poisson/negative binomial with temporal controls, autoregressive count models) <span class="citation" data-cites="camerontrivedi:2005">(Cameron &amp; Trivedi, 2005)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>serial dependence (→ lagged counts or temporal controls)</li>
+<li>overdispersion (→ negative binomial)</li>
+<li>changing exposure (→ offset for time-at-risk)</li>
+<li>structural breaks (→ test for and model regime shifts)</li>
+</ul></td>
+<td><p><strong>Panel count models</strong> — fixed-effects or random-effects Poisson, negative binomial, and correlated random-effects models <span class="citation" data-cites="camerontrivedi:2005 wooldridge:2010">(Cameron &amp; Trivedi, 2005; Wooldridge, 2010)</span></p>
+<p><em>Watch:</em></p>
+<ul>
+<li>unobserved heterogeneity</li>
+<li>serial dependence</li>
+<li>overdispersion (→ negative binomial)</li>
+<li>excess zeros (→ zero-inflated)</li>
+<li>FE Poisson is often preferred for time-invariant heterogeneity (consistent even in short panels), provided the conditional-mean specification is appropriate</li>
+</ul></td>
 </tr>
 </tbody>
 </table>
@@ -1556,29 +1650,29 @@ Table&nbsp;3: Income, Oil, and their Interaction in Democratic Emergence and Sur
 
     <script>
       // Create table-specific functions using external factory
-      const tableFns_vfnp9h8qav3ewuxquc1l = TinyTable.createTableFunctions("tinytable_vfnp9h8qav3ewuxquc1l");
+      const tableFns_kd7znr9ip0subu0ze05h = TinyTable.createTableFunctions("tinytable_kd7znr9ip0subu0ze05h");
       // tinytable span after
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: '-1', j: 5 } ], css_id: 'tinytable_css_0n9rfxwurrnpj5pb4vxz',}, 
-          { positions: [ { i: '-1', j: 3 }, { i: '-1', j: 4 }, { i: '-1', j: 7 }, { i: '-1', j: 8 }, { i: '-1', j: 9 } ], css_id: 'tinytable_css_qjsh88ng89u99rib0y5f',}, 
-          { positions: [ { i: '-2', j: 3 }, { i: '-2', j: 4 }, { i: '-2', j: 5 }, { i: '-2', j: 6 }, { i: '-2', j: 7 }, { i: '-2', j: 8 }, { i: '-2', j: 9 } ], css_id: 'tinytable_css_zbdg5pdnkhzgk21iglyj',}, 
-          { positions: [ { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '11', j: 4 }, { i: '11', j: 5 }, { i: '11', j: 6 }, { i: '11', j: 7 }, { i: '11', j: 8 }, { i: '11', j: 9 } ], css_id: 'tinytable_css_sif9rlk6ezc19snmm0pj',}, 
-          { positions: [ { i: '0', j: 2 }, { i: '8', j: 2 }, { i: '0', j: 3 }, { i: '8', j: 3 }, { i: '0', j: 4 }, { i: '8', j: 4 }, { i: '0', j: 5 }, { i: '8', j: 5 }, { i: '0', j: 6 }, { i: '8', j: 6 }, { i: '0', j: 7 }, { i: '8', j: 7 }, { i: '0', j: 8 }, { i: '8', j: 8 }, { i: '0', j: 9 }, { i: '8', j: 9 } ], css_id: 'tinytable_css_7qk03xote8uayubm2ugq',}, 
-          { positions: [ { i: '-1', j: 2 }, { i: '-1', j: 6 } ], css_id: 'tinytable_css_t1mxudq5alil9e8qqolj',}, 
-          { positions: [ { i: '-2', j: 2 } ], css_id: 'tinytable_css_eldr2sypk3b84pqgy58n',}, 
-          { positions: [ { i: '11', j: 1 } ], css_id: 'tinytable_css_guamwbkq9c74y5ea6ney',}, 
-          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 } ], css_id: 'tinytable_css_sed7d5sl2smea1iv5i7k',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_cqajei59oyu54mqatqlq',}, 
-          { positions: [ { i: '-1', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 } ], css_id: 'tinytable_css_prm4ay4i1iieydr24n8p',}, 
-          { positions: [ { i: '-2', j: 1 } ], css_id: 'tinytable_css_qaz27ngh5igu28gvpa1n',}, 
+          { positions: [ { i: '-1', j: 5 } ], css_id: 'tinytable_css_ypkssvsgw8lnw56q0uoz',}, 
+          { positions: [ { i: '-1', j: 3 }, { i: '-1', j: 4 }, { i: '-1', j: 7 }, { i: '-1', j: 8 }, { i: '-1', j: 9 } ], css_id: 'tinytable_css_65g8q8x86haeym13bzj4',}, 
+          { positions: [ { i: '-2', j: 3 }, { i: '-2', j: 4 }, { i: '-2', j: 5 }, { i: '-2', j: 6 }, { i: '-2', j: 7 }, { i: '-2', j: 8 }, { i: '-2', j: 9 } ], css_id: 'tinytable_css_040fvwt7cvkil3v9wqu5',}, 
+          { positions: [ { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '11', j: 4 }, { i: '11', j: 5 }, { i: '11', j: 6 }, { i: '11', j: 7 }, { i: '11', j: 8 }, { i: '11', j: 9 } ], css_id: 'tinytable_css_5kdnfeternvbgtfu7wtj',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '8', j: 2 }, { i: '0', j: 3 }, { i: '8', j: 3 }, { i: '0', j: 4 }, { i: '8', j: 4 }, { i: '0', j: 5 }, { i: '8', j: 5 }, { i: '0', j: 6 }, { i: '8', j: 6 }, { i: '0', j: 7 }, { i: '8', j: 7 }, { i: '0', j: 8 }, { i: '8', j: 8 }, { i: '0', j: 9 }, { i: '8', j: 9 } ], css_id: 'tinytable_css_q1w8q6l3i6p39x762ods',}, 
+          { positions: [ { i: '-1', j: 2 }, { i: '-1', j: 6 } ], css_id: 'tinytable_css_a3ntxmkni8a9h53fnoht',}, 
+          { positions: [ { i: '-2', j: 2 } ], css_id: 'tinytable_css_u26zp9l1iggjmflhsq5k',}, 
+          { positions: [ { i: '11', j: 1 } ], css_id: 'tinytable_css_l91z0xb5bei8gcmlbf8z',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 } ], css_id: 'tinytable_css_5yh2qkoqk2d41ouj893n',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_2pr81mqzsrd7vdli013c',}, 
+          { positions: [ { i: '-1', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 } ], css_id: 'tinytable_css_7j8my4y5g83awyhrzdi8',}, 
+          { positions: [ { i: '-2', j: 1 } ], css_id: 'tinytable_css_smifki9lufbxfhvadl5j',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  tableFns_vfnp9h8qav3ewuxquc1l.styleCell(cell.i, cell.j, group.css_id);
+                  tableFns_kd7znr9ip0subu0ze05h.styleCell(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -1587,21 +1681,21 @@ Table&nbsp;3: Income, Oil, and their Interaction in Democratic Emergence and Sur
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
     <style>
     /* tinytable css entries after */
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_0n9rfxwurrnpj5pb4vxz, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_0n9rfxwurrnpj5pb4vxz {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 3%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_qjsh88ng89u99rib0y5f, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_qjsh88ng89u99rib0y5f {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_zbdg5pdnkhzgk21iglyj, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_zbdg5pdnkhzgk21iglyj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_sif9rlk6ezc19snmm0pj, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_sif9rlk6ezc19snmm0pj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_7qk03xote8uayubm2ugq, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_7qk03xote8uayubm2ugq {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_t1mxudq5alil9e8qqolj, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_t1mxudq5alil9e8qqolj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_eldr2sypk3b84pqgy58n, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_eldr2sypk3b84pqgy58n {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_guamwbkq9c74y5ea6ney, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_guamwbkq9c74y5ea6ney {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_sed7d5sl2smea1iv5i7k, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_sed7d5sl2smea1iv5i7k { text-align: left }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_cqajei59oyu54mqatqlq, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_cqajei59oyu54mqatqlq {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_prm4ay4i1iieydr24n8p, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_prm4ay4i1iieydr24n8p { text-align: center }
-    #tinytable_vfnp9h8qav3ewuxquc1l td.tinytable_css_qaz27ngh5igu28gvpa1n, #tinytable_vfnp9h8qav3ewuxquc1l th.tinytable_css_qaz27ngh5igu28gvpa1n {  position: relative; --border-bottom: 0; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_ypkssvsgw8lnw56q0uoz, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_ypkssvsgw8lnw56q0uoz {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 3%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_65g8q8x86haeym13bzj4, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_65g8q8x86haeym13bzj4 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_040fvwt7cvkil3v9wqu5, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_040fvwt7cvkil3v9wqu5 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_5kdnfeternvbgtfu7wtj, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_5kdnfeternvbgtfu7wtj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_q1w8q6l3i6p39x762ods, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_q1w8q6l3i6p39x762ods {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_a3ntxmkni8a9h53fnoht, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_a3ntxmkni8a9h53fnoht {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_u26zp9l1iggjmflhsq5k, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_u26zp9l1iggjmflhsq5k {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_l91z0xb5bei8gcmlbf8z, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_l91z0xb5bei8gcmlbf8z {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_5yh2qkoqk2d41ouj893n, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_5yh2qkoqk2d41ouj893n { text-align: left }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_2pr81mqzsrd7vdli013c, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_2pr81mqzsrd7vdli013c {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_7j8my4y5g83awyhrzdi8, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_7j8my4y5g83awyhrzdi8 { text-align: center }
+    #tinytable_kd7znr9ip0subu0ze05h td.tinytable_css_smifki9lufbxfhvadl5j, #tinytable_kd7znr9ip0subu0ze05h th.tinytable_css_smifki9lufbxfhvadl5j {  position: relative; --border-bottom: 0; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
     </style>
     <div class="container">
-      <table class="tinytable" id="tinytable_vfnp9h8qav3ewuxquc1l" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="tinytable" id="tinytable_kd7znr9ip0subu0ze05h" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
         <thead>
 <tr>
