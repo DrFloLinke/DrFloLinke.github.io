@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Dr Flo Linke | Dissertation Guidance</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -57,10 +60,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-98950086c8f476a48e0ae31607b1fd30.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7a4ad5f3a6c86eaab201d404a85ecaa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,7 +118,7 @@ window.MathJax = {
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -128,7 +131,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -154,7 +157,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Crest_white.png" alt="" class="navbar-logo">
+    <img src="./Crest_white.png" alt="" class="navbar-logo light-content">
+    <img src="./Crest_white.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Flo Linke</span>
@@ -385,7 +389,8 @@ window.Quarto = {
 <p>The social sciences are concerned with the study of society and seek to scientifically describe and explain the behaviour of actors.</p>
 </div>
 <p>It is worthwhile remembering this when you embark on your dissertation, as this is essentially the aim of this project: finding an explanation for a phenomenon you are particularly interested in. What makes the dissertation exciting, is that you are trying to answer a question that has not been answered before, or at least not in the way you are attempting to answer it. This will allow you to make a contribution to the knowledge in your field, and push the boundaries of what is known.</p>
-<p>In an empirical dissertation, we find the answer to a research question by assessing the degree to which some observed data agree with a particular theory that you have chosen to explain a phenomenon. This is the essence of empirical research: we observe the world, and we use these observations to evaluate whether our theory is a good explanation for what we see.</p>
+<p>In an empirical dissertation, following a deductive research design (see <a href="#hypotheses">the Section on hypotheses</a> for more details on what a deductive approach is), we find the answer to a research question by assessing the degree to which some observed data agree with a particular theory that you have chosen to explain a phenomenon. We begin with existing theory, derive expectations about what we should observe if that theory is correct, and then collect and analyse data to evaluate those expectations. This is the essence of deductive empirical research: we observe the world and use these observations to evaluate whether our theory provides a good explanation for what we see.</p>
+<p>This guide focuses on the deductive approach to empirical research because it is the approach followed by the vast majority of undergraduate dissertations in political science. Other empirical approaches, such as inductive or interpretivist research, begin from different assumptions and therefore follow a different research logic and structure.</p>
 <div class="def">
 <p><strong>Empirical</strong></p>
 <p>The term <em>empirical</em> relates to verification through observation rather than theoretical reasoning.</p>
@@ -444,7 +449,7 @@ Figure&nbsp;1
 </section>
 <section id="empirical-research-design" class="level1">
 <h1>Empirical Research Design<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h1>
-<p>As mentioned above, an empirical research project follows a particular logic that needs to be observed in order to ensure that the research question is answered and that the findings are scientifically valid. I am going to outline this structure now in more detail, explaining the role each of its constitutive elements has in the project. These are:</p>
+<p>As mentioned above, a deductive empirical research project follows a particular logic that needs to be observed in order to ensure that the research question is answered and that the findings are scientifically valid. I am going to outline this structure now in more detail, explaining the role each of its constitutive elements has in the project. These are:</p>
 <ul>
 <li>Introduction / Research Question</li>
 <li>Literature Review</li>
@@ -894,7 +899,7 @@ table.cm .tgt { color: #fff; font-weight: 600; white-space: nowrap; }
   <div class="custom-html-table">
   <div style="width:70%; margin:auto;">
   
-<table class="cm caption-top table" data-quarto-postprocess="true">
+<table class="cm caption-top table">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">Concept</th>
@@ -1700,29 +1705,29 @@ Table&nbsp;3: Income, Oil, and their Interaction in Democratic Emergence and Sur
 
     <script>
       // Create table-specific functions using external factory
-      const tableFns_ilfx5awnlli3visakawb = TinyTable.createTableFunctions("tinytable_ilfx5awnlli3visakawb");
+      const tableFns_6ep7qkwya86dc6c9mg7v = TinyTable.createTableFunctions("tinytable_6ep7qkwya86dc6c9mg7v");
       // tinytable span after
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: '-1', j: 5 } ], css_id: 'tinytable_css_6kv22hcgst8jswmx9wrg',}, 
-          { positions: [ { i: '-1', j: 3 }, { i: '-1', j: 4 }, { i: '-1', j: 7 }, { i: '-1', j: 8 }, { i: '-1', j: 9 } ], css_id: 'tinytable_css_1eqxcnw9tydg4mysn20b',}, 
-          { positions: [ { i: '-2', j: 3 }, { i: '-2', j: 4 }, { i: '-2', j: 5 }, { i: '-2', j: 6 }, { i: '-2', j: 7 }, { i: '-2', j: 8 }, { i: '-2', j: 9 } ], css_id: 'tinytable_css_og49noblqmh5th4x6mms',}, 
-          { positions: [ { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '11', j: 4 }, { i: '11', j: 5 }, { i: '11', j: 6 }, { i: '11', j: 7 }, { i: '11', j: 8 }, { i: '11', j: 9 } ], css_id: 'tinytable_css_0dqj9nit142nirzo6oeu',}, 
-          { positions: [ { i: '0', j: 2 }, { i: '8', j: 2 }, { i: '0', j: 3 }, { i: '8', j: 3 }, { i: '0', j: 4 }, { i: '8', j: 4 }, { i: '0', j: 5 }, { i: '8', j: 5 }, { i: '0', j: 6 }, { i: '8', j: 6 }, { i: '0', j: 7 }, { i: '8', j: 7 }, { i: '0', j: 8 }, { i: '8', j: 8 }, { i: '0', j: 9 }, { i: '8', j: 9 } ], css_id: 'tinytable_css_tpega7gzoylsyoikozec',}, 
-          { positions: [ { i: '-1', j: 2 }, { i: '-1', j: 6 } ], css_id: 'tinytable_css_ds246z5lb2sbwwyb4pyj',}, 
-          { positions: [ { i: '-2', j: 2 } ], css_id: 'tinytable_css_j87k1km7w31lbzn5u4io',}, 
-          { positions: [ { i: '11', j: 1 } ], css_id: 'tinytable_css_n6zk7lin57vw72mwg32t',}, 
-          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 } ], css_id: 'tinytable_css_tvq6a3r5bhb6b3s2euou',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_9hk3wxy7y5r6nfd7z2t1',}, 
-          { positions: [ { i: '-1', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 } ], css_id: 'tinytable_css_4mjmozpn9zhgzq3m92jq',}, 
-          { positions: [ { i: '-2', j: 1 } ], css_id: 'tinytable_css_qmpom9t6rcnh1eto7ihl',}, 
+          { positions: [ { i: '-1', j: 5 } ], css_id: 'tinytable_css_hixns94ymgaxw5mig4dl',}, 
+          { positions: [ { i: '-1', j: 3 }, { i: '-1', j: 4 }, { i: '-1', j: 7 }, { i: '-1', j: 8 }, { i: '-1', j: 9 } ], css_id: 'tinytable_css_juxcc3kp5mn0ux3bd9f7',}, 
+          { positions: [ { i: '-2', j: 3 }, { i: '-2', j: 4 }, { i: '-2', j: 5 }, { i: '-2', j: 6 }, { i: '-2', j: 7 }, { i: '-2', j: 8 }, { i: '-2', j: 9 } ], css_id: 'tinytable_css_bu3q5dnl3fjpuovgbjao',}, 
+          { positions: [ { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '11', j: 4 }, { i: '11', j: 5 }, { i: '11', j: 6 }, { i: '11', j: 7 }, { i: '11', j: 8 }, { i: '11', j: 9 } ], css_id: 'tinytable_css_0z7u4jzk2ql3pu298l4i',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '8', j: 2 }, { i: '0', j: 3 }, { i: '8', j: 3 }, { i: '0', j: 4 }, { i: '8', j: 4 }, { i: '0', j: 5 }, { i: '8', j: 5 }, { i: '0', j: 6 }, { i: '8', j: 6 }, { i: '0', j: 7 }, { i: '8', j: 7 }, { i: '0', j: 8 }, { i: '8', j: 8 }, { i: '0', j: 9 }, { i: '8', j: 9 } ], css_id: 'tinytable_css_tgnfqt0v5hy0dlqwpvfz',}, 
+          { positions: [ { i: '-1', j: 2 }, { i: '-1', j: 6 } ], css_id: 'tinytable_css_66w18h62jsvtguynexsa',}, 
+          { positions: [ { i: '-2', j: 2 } ], css_id: 'tinytable_css_krcg6crtfva80b2b47si',}, 
+          { positions: [ { i: '11', j: 1 } ], css_id: 'tinytable_css_ta2vh133shlvkxj3l6ut',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 } ], css_id: 'tinytable_css_zvqisxxuqrryufpudz8g',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_qv30f35w8yec5amhche6',}, 
+          { positions: [ { i: '-1', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 } ], css_id: 'tinytable_css_l8c8duzm1b7a027es1fn',}, 
+          { positions: [ { i: '-2', j: 1 } ], css_id: 'tinytable_css_gqshgz3cr9ijvgjpki79',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  tableFns_ilfx5awnlli3visakawb.styleCell(cell.i, cell.j, group.css_id);
+                  tableFns_6ep7qkwya86dc6c9mg7v.styleCell(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -1731,21 +1736,21 @@ Table&nbsp;3: Income, Oil, and their Interaction in Democratic Emergence and Sur
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
     <style>
     /* tinytable css entries after */
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_6kv22hcgst8jswmx9wrg, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_6kv22hcgst8jswmx9wrg {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 3%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_1eqxcnw9tydg4mysn20b, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_1eqxcnw9tydg4mysn20b {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_og49noblqmh5th4x6mms, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_og49noblqmh5th4x6mms {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_0dqj9nit142nirzo6oeu, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_0dqj9nit142nirzo6oeu {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_tpega7gzoylsyoikozec, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_tpega7gzoylsyoikozec {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_ds246z5lb2sbwwyb4pyj, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_ds246z5lb2sbwwyb4pyj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_j87k1km7w31lbzn5u4io, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_j87k1km7w31lbzn5u4io {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_n6zk7lin57vw72mwg32t, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_n6zk7lin57vw72mwg32t {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_tvq6a3r5bhb6b3s2euou, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_tvq6a3r5bhb6b3s2euou { text-align: left }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_9hk3wxy7y5r6nfd7z2t1, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_9hk3wxy7y5r6nfd7z2t1 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_4mjmozpn9zhgzq3m92jq, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_4mjmozpn9zhgzq3m92jq { text-align: center }
-    #tinytable_ilfx5awnlli3visakawb td.tinytable_css_qmpom9t6rcnh1eto7ihl, #tinytable_ilfx5awnlli3visakawb th.tinytable_css_qmpom9t6rcnh1eto7ihl {  position: relative; --border-bottom: 0; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_hixns94ymgaxw5mig4dl, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_hixns94ymgaxw5mig4dl {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 3%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_juxcc3kp5mn0ux3bd9f7, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_juxcc3kp5mn0ux3bd9f7 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_bu3q5dnl3fjpuovgbjao, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_bu3q5dnl3fjpuovgbjao {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_0z7u4jzk2ql3pu298l4i, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_0z7u4jzk2ql3pu298l4i {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_tgnfqt0v5hy0dlqwpvfz, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_tgnfqt0v5hy0dlqwpvfz {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_66w18h62jsvtguynexsa, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_66w18h62jsvtguynexsa {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_krcg6crtfva80b2b47si, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_krcg6crtfva80b2b47si {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.03em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 3%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_ta2vh133shlvkxj3l6ut, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_ta2vh133shlvkxj3l6ut {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_zvqisxxuqrryufpudz8g, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_zvqisxxuqrryufpudz8g { text-align: left }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_qv30f35w8yec5amhche6, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_qv30f35w8yec5amhche6 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_l8c8duzm1b7a027es1fn, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_l8c8duzm1b7a027es1fn { text-align: center }
+    #tinytable_6ep7qkwya86dc6c9mg7v td.tinytable_css_gqshgz3cr9ijvgjpki79, #tinytable_6ep7qkwya86dc6c9mg7v th.tinytable_css_gqshgz3cr9ijvgjpki79 {  position: relative; --border-bottom: 0; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
     </style>
     <div class="container">
-      <table class="tinytable" id="tinytable_ilfx5awnlli3visakawb" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="tinytable" id="tinytable_6ep7qkwya86dc6c9mg7v" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
         <thead>
 <tr>
@@ -2414,7 +2419,7 @@ Driscoll, J. C., &amp; Kraay, A. C. (1998). <span class="nocase">Consistent Cova
 Eckstein, H. (1975). Case study and theory in political science. In F. I. Greenstein &amp; N. W. Polsby (Eds.), <em>Handbook of political science</em> (Vol. 7, pp. 79–137). Addison-Wesley.
 </div>
 <div id="ref-epstein:2006" class="csl-entry" role="listitem">
-Epstein, D. L., Bates, R., Goldstone, J., Kristensen, I., &amp; O’Halloran, S. (2006). <span>Democratic Transitions</span>. <em><span>American Journal of Political Science</span></em>, <em>50</em>(3), 551–569. <a href="https://doi.org/10.1111/j.1540-5907.2006.00201.x">https://doi.org/10.1111/j.1540-5907.2006.00201.x</a>
+Epstein, D. L., Bates, R., Goldstone, J., Kristensen, I., &amp; O’Halloran, S. (2006). <span>Democratic Transitions</span>. <em><span class="nocase">American Journal of Political Science</span></em>, <em>50</em>(3), 551–569. <a href="https://doi.org/10.1111/j.1540-5907.2006.00201.x">https://doi.org/10.1111/j.1540-5907.2006.00201.x</a>
 </div>
 <div id="ref-gale:2013" class="csl-entry" role="listitem">
 Gale, N. K., Heath, G., Cameron, E., Rashid, S., &amp; Redwood, S. (2013). <span class="nocase">Using the Framework Method for the Analysis of Qualitative Data in Multi-Disciplinary Health Research</span>. <em>BMC Medical Research Methodology</em>, <em>13</em>, 117. <a href="https://doi.org/10.1186/1471-2288-13-117">https://doi.org/10.1186/1471-2288-13-117</a>
@@ -2591,13 +2596,14 @@ Wooldridge, J. M. (2010). <em><span class="nocase">Econometric Analysis of Cross
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
